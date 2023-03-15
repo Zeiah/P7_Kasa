@@ -19,18 +19,25 @@ export default function Slideshow({ slides }) {
     };
 
     return (
-        <section className="accommodation__slideshow">
-            <div className="accommodation__slideshow__inner">
-                <div className="arrowBack" onClick={prevSlide}>
-                    back<img src={arrowBack} alt="button back"></img>
-                </div>
-                <div className="arrowCenter">
-                    {currentIndex + 1}/{slides.length}
-                </div>
-                <div className="arrowForward" onClick={nextSlide}>
-                    forward<img src={arrowForward} alt="button forward"></img>
-                </div>
+        <section
+            className="accommodation__slideshow"
+            style={{ backgroundImage: `url(${slides[currentIndex].img})` }}
+        >
+            <img
+                className="slideshow__arrow arrowBack"
+                onClick={prevSlide}
+                src={arrowBack}
+                alt="button back"
+            ></img>
+            <div className="slideshow__count">
+                {currentIndex + 1}/{slides.length}
             </div>
+            <img
+                className="slideshow__arrow arrowForward"
+                onClick={nextSlide}
+                src={arrowForward}
+                alt="button forward"
+            ></img>
         </section>
     );
 }

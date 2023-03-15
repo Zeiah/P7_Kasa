@@ -34,13 +34,21 @@ export default function About() {
             <section className="about__banner">
                 <img src={banner} alt="banner"></img>
             </section>
-            {aboutData.map((data) => {
-                return (
-                    <section key={data.id} className="about__collapse">
-                        <Collapse title={data.title} content={data.content} />
-                    </section>
-                );
-            })}
+            <section className="about__collapses">
+                {aboutData.map((data) => {
+                    return (
+                        <div
+                            key={data.id}
+                            className="about__collapses__collapse"
+                        >
+                            <Collapse
+                                title={data.title}
+                                content={data.content}
+                            />
+                        </div>
+                    );
+                })}
+            </section>
         </main>
     );
 }

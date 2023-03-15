@@ -1,8 +1,7 @@
 .home__banner {
-    background-image:"../assets/banner__home.png";
-    background-color: $background-color;
+    background-image: '../assets/banner__home.png';
     opacity: 0.3;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +20,7 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap:50px;
+    gap: 50px;
     padding: 56px 50px;
 }
 
@@ -45,12 +44,11 @@
     }
     h2 {
         position: absolute;
-        top:78.82%;
+        top: 78.82%;
         left: 5.88%;
         right: 5.88%;
         bottom: 5.88%;
         font-size: 18px;
-        color:$color-secondary;
+        color: $color-secondary;
     }
 }
-

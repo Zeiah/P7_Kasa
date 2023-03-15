@@ -15,7 +15,9 @@ const Collapse = ({ title, content }) => {
                     <img src={arrow} alt="button"></img>
                 </button>
             </div>
-            <div>{isOpen ? <p>{content}</p> : null}</div>
+            <div className="collapse__open">
+                {isOpen ? <p>{content}</p> : null}
+            </div>
         </>
     );
 };
