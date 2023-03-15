@@ -4,18 +4,25 @@
 
 body {
   min-width: 360px;
-  max-width: 1240px;
+  max-width: 1440px;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  margin: 0;
+}
+
+header,
+main {
   margin: 40px 100px;
 }
 @media (min-width: 720px) and (max-width: 1023px) {
-  body {
+  header,
+  main {
     margin: 30px 30px;
   }
 }
 @media (max-width: 719px) {
-  body {
+  header,
+  main {
     margin: 20px 20px;
   }
 }
@@ -198,8 +205,10 @@ body {
 }
 
 .home__banner {
-  background-image: "../assets/banner__home.png";
-  opacity: 0.3;
+  background-image: url(../assets/banner__home.png);
+  background-position: center;
+  background-size: cover;
+  mix-blend-mode: darken;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,7 +218,7 @@ body {
 .home__banner h1 {
   font-size: 48px;
   font-weight: 500;
-  line-height: 142.6%;
+  line-height: 68.45px;
   color: white;
 }
 

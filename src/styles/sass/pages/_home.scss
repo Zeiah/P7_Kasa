@@ -1,17 +1,22 @@
 .home__banner {
-    background-image: '../assets/banner__home.png';
-    opacity: 0.3;
+    background-image: url(../assets/banner__home.png);
+    background-position: center;
+    background-size: cover;
+    //background-color: black;
+    mix-blend-mode: darken;
+    //opacity: 30%;
 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 223px;
+
     border-radius: $border-radius;
 
     h1 {
         font-size: 48px;
         font-weight: 500;
-        line-height: 142.6%;
+        line-height: 68.45px;
         color: $color-secondary;
     }
 }
