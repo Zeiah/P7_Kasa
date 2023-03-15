@@ -1,0 +1,38 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $background-color;
+    color: $color-secondary;
+    height: 209px;
+    padding: 40px;
+    margin: 0;
+
+    @include respond-to(mobile) {
+        padding: 40px 40px 80px 40px;
+    }
+
+    img {
+        width: 122px;
+        height: 39.44px;
+    }
+
+    p {
+        margin: 0;
+        padding-top: 40px;
+        font-size: 24px;
+        @include respond-to(tablet) {
+            font-size: 18px;
+        }
+        @include respond-to(mobile) {
+            font-size: 12px;
+        }
+    }
+
+    @include respond-to(mobile) {
+        p {
+            font-size: 12px;
+        }
+    }
+}

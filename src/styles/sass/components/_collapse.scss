@@ -1,0 +1,18 @@
+.collapse__close {
+    background-color: $color-primary;
+    color: $color-secondary;
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
+    button {
+        border:none;
+        background-color: $color-primary;
+    }
+}
+   
+.about__collapse {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1023px;
+    }
