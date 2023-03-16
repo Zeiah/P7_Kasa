@@ -160,7 +160,7 @@ main {
   transform-origin: top;
 }
 
-.about__collapses {
+.about__collapse {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -168,21 +168,47 @@ main {
   gap: 40px;
   width: 80%;
 }
-.about__collapses .collapse .collapse__title {
+.about__collapse .collapse .collapse__title {
   border-radius: 5px;
 }
-.about__collapses .collapse .collapse__title button {
+.about__collapse .collapse .collapse__title button {
   border-radius: 5px;
 }
-.about__collapses .collapse .collapse__title h2 {
+.about__collapse .collapse .collapse__title h2 {
   font-size: 25px;
 }
-.about__collapses .collapse .collapse__content {
+.about__collapse .collapse .collapse__content {
   padding: 36px 27px 19px 18px;
   border-radius: 0 0 5px 5px;
-}
-.about__collapses .collapse .collapse__content p {
   font-size: 24px;
+  font-weight: 400;
+}
+
+.accommodation__collapse {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 76px;
+}
+.accommodation__collapse .collapse {
+  width: 582px;
+}
+.accommodation__collapse .collapse .collapse__title {
+  border-radius: 10px;
+}
+.accommodation__collapse .collapse .collapse__title button {
+  border-radius: 10px;
+}
+.accommodation__collapse .collapse .collapse__title h2 {
+  font-size: 18px;
+}
+.accommodation__collapse .collapse .collapse__content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 12px 27px 20px;
+  border-radius: 0 0 10px 10px;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 @keyframes content-appear {
@@ -284,6 +310,49 @@ main {
   bottom: 5.88%;
   font-size: 18px;
   color: white;
+}
+
+.accommodation__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #ff6060;
+}
+.accommodation__info .accommodation__info__location {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+.accommodation__info .accommodation__info__location h1 {
+  font-size: 36px;
+  line-height: 51.34px;
+  margin: 0;
+}
+.accommodation__info .accommodation__info__location h3 {
+  font-size: 18px;
+  margin: 0;
+}
+.accommodation__info .accommodation__info__host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 20px;
+}
+.accommodation__info .accommodation__info__host .accommodation__info__host__person {
+  display: flex;
+  justify-content: flex-end;
+}
+.accommodation__info .accommodation__info__host .accommodation__info__host__person p {
+  font-size: 18px;
+  width: 50%;
+}
+.accommodation__info .accommodation__info__host .accommodation__info__host__person img {
+  border-radius: 50%;
+}
+.accommodation__info .accommodation__info__host .accommodation__info__host__rate {
+  justify-content: flex-end;
 }
 
 .about__banner {

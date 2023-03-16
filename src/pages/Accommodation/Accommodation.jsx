@@ -28,11 +28,11 @@ export default function Accommodation() {
                 <section className="accommodation__info">
                     <div className="accommodation__info__location">
                         <h1>{accommodation.title}</h1>
-                        <p>{accommodation.location}</p>
+                        <h3>{accommodation.location}</h3>
                         <div>{accommodation.tags}</div>
                     </div>
                     <div className="accommodation__info__host">
-                        <div className='"accommodation__info__host__person'>
+                        <div className="accommodation__info__host__person">
                             <p>{accommodation.host.name}</p>
                             <img
                                 src={accommodation.host.picture}
@@ -53,7 +53,6 @@ export default function Accommodation() {
                         <Collapse
                             title={'Équipements'}
                             content={accommodation.equipments}
-                            className="accommodation__collapse-equipment"
                         />
                     </article>
                 </section>

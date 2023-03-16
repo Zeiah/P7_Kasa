@@ -34,7 +34,7 @@ export default function About() {
             <section className="about__banner">
                 <img src={banner} alt="banner"></img>
             </section>
-            <section className="about__collapses">
+            <section className="about__collapse">
                 {aboutData.map((data) => {
                     return (
                         <div key={data.id} className=" collapse">

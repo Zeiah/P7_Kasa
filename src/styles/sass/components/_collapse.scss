@@ -28,7 +28,7 @@
     }
 }
 
-.about__collapses {
+.about__collapse {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,13 +48,38 @@
         .collapse__content {
             padding: 36px 27px 19px 18px;
             border-radius: 0 0 5px 5px;
-            p {
-                font-size: 24px;
-            }
+            font-size: 24px;
+            font-weight: 400;
         }
     }
 }
 
+.accommodation__collapse {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 76px;
+    .collapse {
+        width: 582px;
+        .collapse__title {
+            border-radius: 10px;
+            button {
+                border-radius: 10px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+        }
+        .collapse__content {
+            display: flex;
+            flex-direction: column;
+            padding: 40px 12px 27px 20px;
+            border-radius: 0 0 10px 10px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+}
 @keyframes content-appear {
     0% {
         opacity: 0.25;

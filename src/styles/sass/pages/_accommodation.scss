@@ -1,0 +1,43 @@
+.accommodation__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: $color-primary;
+    .accommodation__info__location {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        h1 {
+            font-size: 36px;
+            line-height: 51.34px;
+            margin: 0;
+        }
+        h3 {
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+    .accommodation__info__host {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 20px;
+
+        .accommodation__info__host__person {
+            display: flex;
+            justify-content: flex-end;
+            p {
+                font-size: 18px;
+                width: 50%;
+            }
+            img {
+                border-radius: 50%;
+            }
+        }
+        .accommodation__info__host__rate {
+            justify-content: flex-end;
+        }
+    }
+}
