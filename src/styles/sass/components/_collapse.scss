@@ -1,19 +1,31 @@
-.collapse__close {
-    background-color: $color-primary;
-    color: $color-secondary;
-    display: flex;
-    justify-content: space-between;
-    align-content: baseline;
-    padding: 0 30px 0 20px;
-    button {
-        border: none;
+.collapse {
+    .collapse__title {
         background-color: $color-primary;
+        color: $color-secondary;
+        display: flex;
+        justify-content: space-between;
+        align-content: baseline;
+        padding: 0 30px 0 20px;
+        button {
+            border: none;
+            background-color: $color-primary;
+            .arrow {
+                animation: transform;
+                transform: rotate(0deg);
+            }
+            .arrow__rotated {
+                animation: transform;
+                transform: rotate(180deg);
+            }
+        }
     }
-}
-
-.collapse__open {
-    background-color: $collapse-background-color;
-    color: $color-primary;
+    .collapse__content {
+        background-color: $collapse-background-color;
+        color: $color-primary;
+        margin: 0;
+        animation: content-appear 1s ease-in forwards;
+        transform-origin: top;
+    }
 }
 
 .about__collapses {
@@ -23,8 +35,8 @@
     margin: auto;
     gap: 40px;
     width: 80%;
-    .about__collapses__collapse {
-        .collapse__close {
+    .collapse {
+        .collapse__title {
             border-radius: 5px;
             button {
                 border-radius: 5px;
@@ -33,12 +45,26 @@
                 font-size: 25px;
             }
         }
-        .collapse__open {
+        .collapse__content {
             padding: 36px 27px 19px 18px;
             border-radius: 0 0 5px 5px;
             p {
                 font-size: 24px;
             }
         }
+    }
+}
+
+@keyframes content-appear {
+    0% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

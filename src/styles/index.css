@@ -132,7 +132,7 @@ main {
   }
 }
 
-.collapse__close {
+.collapse .collapse__title {
   background-color: #ff6060;
   color: white;
   display: flex;
@@ -140,14 +140,24 @@ main {
   align-content: baseline;
   padding: 0 30px 0 20px;
 }
-.collapse__close button {
+.collapse .collapse__title button {
   border: none;
   background-color: #ff6060;
 }
-
-.collapse__open {
+.collapse .collapse__title button .arrow {
+  animation: transform;
+  transform: rotate(0deg);
+}
+.collapse .collapse__title button .arrow__rotated {
+  animation: transform;
+  transform: rotate(180deg);
+}
+.collapse .collapse__content {
   background-color: #f7f7f7;
   color: #ff6060;
+  margin: 0;
+  animation: content-appear 1s ease-in forwards;
+  transform-origin: top;
 }
 
 .about__collapses {
@@ -158,23 +168,34 @@ main {
   gap: 40px;
   width: 80%;
 }
-.about__collapses .about__collapses__collapse .collapse__close {
+.about__collapses .collapse .collapse__title {
   border-radius: 5px;
 }
-.about__collapses .about__collapses__collapse .collapse__close button {
+.about__collapses .collapse .collapse__title button {
   border-radius: 5px;
 }
-.about__collapses .about__collapses__collapse .collapse__close h2 {
+.about__collapses .collapse .collapse__title h2 {
   font-size: 25px;
 }
-.about__collapses .about__collapses__collapse .collapse__open {
+.about__collapses .collapse .collapse__content {
   padding: 36px 27px 19px 18px;
   border-radius: 0 0 5px 5px;
 }
-.about__collapses .about__collapses__collapse .collapse__open p {
+.about__collapses .collapse .collapse__content p {
   font-size: 24px;
 }
 
+@keyframes content-appear {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .accommodation__slideshow {
   max-width: 1240px;
   height: 415px;

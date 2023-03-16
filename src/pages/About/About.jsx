@@ -37,10 +37,7 @@ export default function About() {
             <section className="about__collapses">
                 {aboutData.map((data) => {
                     return (
-                        <div
-                            key={data.id}
-                            className="about__collapses__collapse"
-                        >
+                        <div key={data.id} className=" collapse">
                             <Collapse
                                 title={data.title}
                                 content={data.content}

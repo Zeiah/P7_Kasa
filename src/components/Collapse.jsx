@@ -9,15 +9,17 @@ const Collapse = ({ title, content }) => {
 
     return (
         <>
-            <div className="collapse__close">
+            <div className="collapse__title">
                 <h2>{title}</h2>
                 <button onClick={handleIsOpen}>
-                    <img src={arrow} alt="button"></img>
+                    <img
+                        src={arrow}
+                        alt="button"
+                        className={isOpen ? 'arrow__rotated' : 'arrow'}
+                    ></img>
                 </button>
             </div>
-            <div className="collapse__open">
-                {isOpen ? <p>{content}</p> : null}
-            </div>
+            {isOpen ? <p className="collapse__content">{content}</p> : null}
         </>
     );
 };
