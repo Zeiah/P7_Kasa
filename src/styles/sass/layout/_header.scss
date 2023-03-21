@@ -2,26 +2,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 68px;
+    height: 47px;
 
-    @include respond-to(mobile) {
-        height: 47px;
+    @include respond-to(desktop) {
+        height: 68px;
     }
 
     .header__logo {
-        width: 210.32px;
-        height: 68px;
+        width: 145px;
+        height: 47px;
+
         img {
             object-fit: contain;
             width: 100%;
         }
+
         @include respond-to(tablet) {
             width: 145px;
-            height: 47px;
+            height: 60px;
         }
-        @include respond-to(mobile) {
-            width: 145px;
-            height: 47px;
+
+        @include respond-to(desktop) {
+            width: 210.32px;
+            height: 68px;
         }
     }
 
@@ -30,14 +33,20 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            gap: 50px;
+            gap: 15px;
             list-style: none;
+            text-transform: uppercase;
         }
 
-        @include respond-to(mobile) {
+        @include respond-to(tablet) {
+            gap: 30px;
+            text-transform: none;
+        }
+
+        @include respond-to(desktop) {
             ul {
-                gap: 15px;
-                text-transform: uppercase;
+                gap: 50px;
+                text-transform: none;
             }
         }
     }
@@ -45,15 +54,18 @@
 
 .navBar__link {
     color: $color-primary;
-    font-size: 24px;
+    font-size: 12px;
     text-decoration: underline;
+
     &:focus {
         text-decoration: none;
     }
+
     @include respond-to(tablet) {
         font-size: 18px;
     }
-    @include respond-to(mobile) {
-        font-size: 12px;
+
+    @include respond-to(desktop) {
+        font-size: 24px;
     }
 }

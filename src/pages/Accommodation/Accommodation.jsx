@@ -1,8 +1,10 @@
 import React from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import Error from '../../pages/Error/Error';
 import Slideshow from '../../components/Slideshow';
-import Collapse from '../../components/Collapse';
+import Items from '../../components/Items';
 import Rate from '../../components/Rate';
+import Collapse from '../../components/Collapse';
 
 import { useEffect, useState } from 'react';
 import accommodationsList from '../../logements.json';
@@ -17,10 +19,6 @@ export default function Accommodation() {
         document.title = accommodation.title;
     }, [accommodation.title]);*/
 
-    const navigate = useNavigate();
-
-    console.log(accommodation.pictures);
-
     if (accommodation) {
         return (
             <main>
@@ -29,17 +27,21 @@ export default function Accommodation() {
                     <div className="accommodation__info__location">
                         <h1>{accommodation.title}</h1>
                         <h3>{accommodation.location}</h3>
-                        <div>{accommodation.tags}</div>
+                        <div className="accommodation__info__location__tags">
+                            <Items list={accommodation.tags} />
+                        </div>
                     </div>
                     <div className="accommodation__info__host">
+                        <Rate rating={accommodation.rating} />
                         <div className="accommodation__info__host__person">
-                            <p>{accommodation.host.name}</p>
+                            <div className="accommodation__info__host__person__name">
+                                {accommodation.host.name}
+                            </div>
                             <img
                                 src={accommodation.host.picture}
                                 alt="Votre hôte"
                             ></img>
                         </div>
-                        <Rate rating={accommodation.rating} />
                     </div>
                 </section>
                 <section className="accommodation__collapse">
@@ -52,13 +54,13 @@ export default function Accommodation() {
                     <article className="collapse">
                         <Collapse
                             title={'Équipements'}
-                            content={accommodation.equipments}
+                            content={<Items list={accommodation.equipments} />}
                         />
                     </article>
                 </section>
             </main>
         );
     } else {
-        return navigate('./error');
+        return <Error />;
     }
 }

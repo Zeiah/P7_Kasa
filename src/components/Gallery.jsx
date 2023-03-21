@@ -9,7 +9,10 @@ export default function Gallery() {
         <>
             {accommodationsList.map((accommodation) => {
                 return (
-                    <Link to={`/accommodation/${accommodation.id}`}>
+                    <Link
+                        to={`/accommodation/${accommodation.id}`}
+                        key={accommodation.id}
+                    >
                         <article
                             key={accommodation.id}
                             className="home__gallery__card"

@@ -4,11 +4,25 @@
         color: $color-secondary;
         display: flex;
         justify-content: space-between;
-        align-content: baseline;
-        padding: 0 30px 0 20px;
+        align-items: center;
+        padding: 0 5px 0 12px;
+
+        @include respond-to(desktop) {
+            padding: 0 30px 0 20px;
+        }
+
         button {
             border: none;
             background-color: $color-primary;
+            .arrow,
+            .arrow__rotated {
+                height: 8.98px;
+                width: 15.2px;
+                @include respond-to(desktop) {
+                    height: 14.06px;
+                    width: 23.86px;
+                }
+            }
             .arrow {
                 animation: transform;
                 transform: rotate(0deg);
@@ -23,8 +37,6 @@
         background-color: $collapse-background-color;
         color: $color-primary;
         margin: 0;
-        animation: content-appear 1s ease-in forwards;
-        transform-origin: top;
     }
 }
 
@@ -33,23 +45,45 @@
     flex-direction: column;
     justify-content: space-between;
     margin: auto;
-    gap: 40px;
-    width: 80%;
+    gap: 20px;
+    width: 100%;
+
+    @include respond-to(desktop) {
+        width: 82.5%;
+        gap: 40px;
+    }
+
     .collapse {
-        .collapse__title {
+        .collapse__title,
+        .collapse__title > button {
             border-radius: 5px;
-            button {
-                border-radius: 5px;
+            height: 30px;
+
+            @include respond-to(desktop) {
+                height: 47px;
             }
-            h2 {
-                font-size: 25px;
+        }
+        .collapse__title > h2 {
+            line-height: 18.54px;
+            font-size: 13px;
+
+            @include respond-to(desktop) {
+                line-height: 34.22px;
+                font-size: 24px;
             }
         }
         .collapse__content {
-            padding: 36px 27px 19px 18px;
             border-radius: 0 0 5px 5px;
-            font-size: 24px;
             font-weight: 400;
+            line-height: 17.11px;
+            font-size: 12px;
+            padding: 23.08px 6.91px 52.28px 11.51px;
+
+            @include respond-to(desktop) {
+                line-height: 34.22px;
+                font-size: 24px;
+                padding: 36px 27px 19px 18px;
+            }
         }
     }
 }
@@ -58,38 +92,49 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 76px;
+    gap: 25px;
+    margin-top: 20px;
+    @include respond-to(desktop) {
+        gap: 76px;
+        margin-top: 20px;
+    }
+
     .collapse {
-        width: 582px;
-        .collapse__title {
-            border-radius: 10px;
-            button {
+        width: 335px;
+        @include respond-to(desktop) {
+            width: 582px;
+        }
+        .collapse__title,
+        .collapse__title > button {
+            border-radius: 5px;
+            @include respond-to(desktop) {
                 border-radius: 10px;
             }
-            h2 {
+        }
+        .collapse__title > h2 {
+            font-size: 13px;
+
+            @include respond-to(desktop) {
                 font-size: 18px;
             }
         }
         .collapse__content {
+            height: 143.32px;
             display: flex;
             flex-direction: column;
-            padding: 40px 12px 27px 20px;
-            border-radius: 0 0 10px 10px;
-            font-size: 18px;
+            padding: 23.02px 6.91px 1.3px 11.51px;
+            border-radius: 0 0 5px 5px;
+            font-size: 12px;
             font-weight: 400;
+            line-height: 17.11px;
+
+            @include respond-to(desktop) {
+                height: 249px;
+                padding: 40px 12px 53px 20px;
+                border-radius: 0 0 10px 10px;
+                font-size: 18px;
+                line-height: 25.67px;
+            }
         }
-    }
-}
-@keyframes content-appear {
-    0% {
-        opacity: 0.25;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
-        opacity: 1;
     }
 }

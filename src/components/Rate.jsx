@@ -6,7 +6,7 @@ export default function Rate({ rating }) {
     const stars = [1, 2, 3, 4, 5];
     console.log('rating', rating);
     return (
-        <div className='"accommodation__info__host__rate'>
+        <div className="accommodation__info__host__rate">
             {stars.map((level) =>
                 rating >= level ? (
                     <img

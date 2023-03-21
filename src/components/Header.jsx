@@ -1,4 +1,4 @@
-import '../styles/index.css';
+import React from 'react';
 import logo from '../assets/logo-header.png';
 import NavBar from './NavBar';
 

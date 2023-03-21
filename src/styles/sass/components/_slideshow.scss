@@ -6,28 +6,25 @@
     border-radius: 25px;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    border: 2px solid black;
-}
-
-.slideshow__arrow {
-    flex: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    color: rgb(185, 8, 38);
-    cursor: pointer;
-    &:active {
-        transform: translatex(-50%) scale(0.75);
+    .slideshow__arrow {
+        flex: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(185, 8, 38);
+        cursor: pointer;
+        img {
+            width: 46.68px;
+            height: 79.2px;
+        }
     }
-}
-
-.slideshow__count {
-    flex: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 30px;
+    .slideshow__count {
+        flex: 84%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 30px;
+        color: $color-secondary;
+        font-size: 18px;
+    }
 }

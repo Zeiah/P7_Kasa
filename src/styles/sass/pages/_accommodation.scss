@@ -1,43 +1,117 @@
 .accommodation__info {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     color: $color-primary;
-    .accommodation__info__location {
-        display: flex;
-        flex-direction: column;
+}
+
+.accommodation__info__location {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+    @include respond-to(desktop) {
         width: 75%;
-        h1 {
+    }
+    h1 {
+        font-size: 18px;
+        line-height: 25.67px;
+        margin: 0;
+
+        @include respond-to(desktop) {
             font-size: 36px;
             line-height: 51.34px;
-            margin: 0;
-        }
-        h3 {
-            font-size: 18px;
-            margin: 0;
         }
     }
-    .accommodation__info__host {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: flex-end;
-        gap: 20px;
+    h3 {
+        font-size: 14px;
+        line-height: 19.96px;
+        margin: 0;
 
-        .accommodation__info__host__person {
+        @include respond-to(desktop) {
+            font-size: 18px;
+            line-height: 25.67px;
+        }
+    }
+    .accommodation__info__location__tags {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .item {
             display: flex;
-            justify-content: flex-end;
-            p {
-                font-size: 18px;
-                width: 50%;
-            }
-            img {
-                border-radius: 50%;
+            align-items: center;
+            background-color: $color-primary;
+            color: $color-secondary;
+            padding: 2.16px 27.93px 1.84px 27.07px;
+            font-size: 10px;
+            line-height: 14.26px;
+            border-radius: 5px;
+
+            @include respond-to(desktop) {
+                padding: 3px 31px 2px 30px;
+                font-size: 14px;
+                line-height: 19.96px;
+                border-radius: 10px;
             }
         }
-        .accommodation__info__host__rate {
-            justify-content: flex-end;
+    }
+}
+
+.accommodation__info__host {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+    .accommodation__info__host__rate {
+        width: 98px;
+        height: 18px;
+        display: flex;
+        gap: 5px;
+        .star {
+            width: 15px;
+            height: 15px;
+            @include respond-to(desktop) {
+                height: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .accommodation__info__host__person {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        .accommodation__info__host__person__name {
+            display: flex;
+            line-height: 17.11px;
+            font-size: 12px;
+            width: 80px;
+            text-align: right;
+
+            @include respond-to(desktop) {
+                line-height: 25.67px;
+                font-size: 18px;
+            }
+        }
+        img {
+            border-radius: 50%;
+            //margin: -5px;
+            width: 32px;
+            height: 32px;
+
+            @include respond-to(desktop) {
+                border-radius: 50%;
+                //margin: -5px;
+                width: 64px;
+                height: 64px;
+            }
         }
     }
 }
