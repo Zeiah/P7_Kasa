@@ -1,21 +1,30 @@
 .accommodation__slideshow {
     max-width: 1240px;
-    height: 415px;
+    height: 255px;
     display: flex;
-    margin: 40px 0;
-    border-radius: 25px;
+    margin: 30px 0 15px 0;
+    border-radius: $border-radius-small;
     background-position: center;
     background-size: cover;
+    @include respond-to(desktop) {
+        height: 415px;
+        border-radius: $border-radius-big;
+        margin: 40px 0;
+    }
     .slideshow__arrow {
         flex: 8%;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: rgb(185, 8, 38);
+        color: $color-secondary;
         cursor: pointer;
         img {
-            width: 46.68px;
-            height: 79.2px;
+            width: 11.67px;
+            height: 19.8px;
+            @include respond-to(desktop) {
+                width: 46.68px;
+                height: 79.2px;
+            }
         }
     }
     .slideshow__count {
@@ -26,5 +35,12 @@
         padding-bottom: 30px;
         color: $color-secondary;
         font-size: 18px;
+        opacity: 0;
+        @include respond-to(tablet) {
+            opacity: 1;
+        }
+        @include respond-to(desktop) {
+            opacity: 1;
+        }
     }
 }

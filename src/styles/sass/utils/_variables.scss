@@ -4,3 +4,13 @@ $collapse-background-color: #f7f7f7;
 
 $color-primary: #ff6060;
 $color-secondary: white;
+
+$border-radius-big: 25px;
+$border-radius-small: 10px;
+$border-radius-very-small: 5px;
+@mixin border-radius-bottom-very-small {
+    border-radius: 0 0 5px 5px;
+}
+@mixin border-radius-bottom-small {
+    border-radius: 0 0 10px 10px;
+}

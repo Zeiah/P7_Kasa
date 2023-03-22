@@ -56,7 +56,7 @@
     .collapse {
         .collapse__title,
         .collapse__title > button {
-            border-radius: 5px;
+            border-radius: $border-radius-very-small;
             height: 30px;
 
             @include respond-to(desktop) {
@@ -106,9 +106,9 @@
         }
         .collapse__title,
         .collapse__title > button {
-            border-radius: 5px;
+            border-radius: $border-radius-very-small;
             @include respond-to(desktop) {
-                border-radius: 10px;
+                border-radius: $border-radius-small;
             }
         }
         .collapse__title > h2 {
@@ -123,7 +123,7 @@
             display: flex;
             flex-direction: column;
             padding: 23.02px 6.91px 1.3px 11.51px;
-            border-radius: 0 0 5px 5px;
+            @include border-radius-bottom-very-small;
             font-size: 12px;
             font-weight: 400;
             line-height: 17.11px;
@@ -131,7 +131,7 @@
             @include respond-to(desktop) {
                 height: 249px;
                 padding: 40px 12px 53px 20px;
-                border-radius: 0 0 10px 10px;
+                @include border-radius-bottom-small;
                 font-size: 18px;
                 line-height: 25.67px;
             }

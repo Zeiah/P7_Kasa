@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import arrow from '../assets/arrow_back_collapse.png';
 

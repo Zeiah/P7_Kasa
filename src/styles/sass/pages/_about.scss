@@ -7,7 +7,7 @@
 
     img {
         width: 100%;
-        border-radius: 10px;
+        border-radius: $border-radius-small;
         height: 223px;
         object-position: 50% 50%;
         object-fit: cover;
@@ -15,6 +15,6 @@
 
     @include respond-to(desktop) {
         margin-bottom: 30px;
-        border-radius: 25px;
+        border-radius: $border-radius-big;
     }
 }

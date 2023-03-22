@@ -6,18 +6,18 @@
     align-items: center;
     flex-wrap: wrap;
     height: 111px;
-    border-radius: 10px;
+    border-radius: $border-radius-small;
 
     @include respond-to(tablet) {
         height: 160px;
-        border-radius: 25px;
+        border-radius: $border-radius-big;
         justify-content: center;
         margin-top: 50px;
     }
 
     @include respond-to(desktop) {
         height: 223px;
-        border-radius: 25px;
+        border-radius: $border-radius-big;
         justify-content: center;
         margin-top: 75px;
     }
@@ -69,7 +69,7 @@
         width: 335px;
         height: 255px;
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: $border-radius-small;
         padding: 0 19.71px 15px 19.71px;
         display: flex;
         align-items: flex-end;
