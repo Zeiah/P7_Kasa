@@ -18,7 +18,14 @@ export default function Slideshow({ slides = [] }) {
         );
     };
 
-    return (
+    return slides.length === 1 ? (
+        <div
+            className="accommodation__slideshow"
+            style={{
+                backgroundImage: `url(${slides[currentIndex]})`,
+            }}
+        ></div>
+    ) : (
         <section
             className="accommodation__slideshow"
             style={{ backgroundImage: `url(${slides[currentIndex]})` }}
