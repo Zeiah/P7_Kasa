@@ -5,8 +5,8 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Accommodation from './pages/Accommodation/Accommodation';
 import Error from './pages/Error/Error';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './layout/Header';
+import Footer from './layout/Footer';
 
 export default function App() {
     return (

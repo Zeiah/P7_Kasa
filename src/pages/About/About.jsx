@@ -1,8 +1,13 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Collapse from '../../components/Collapse';
 import banner from '../../assets/banner__about.png';
 
 export default function About() {
+    useEffect(() => {
+        document.title = 'Kasa / À propos';
+    }, []);
+
     const aboutData = [
         {
             id: 1,

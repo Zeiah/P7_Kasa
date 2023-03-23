@@ -1,7 +1,12 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Error() {
+    useEffect(() => {
+        document.title = 'Kasa / Erreur';
+    }, []);
+
     return (
         <div className="error">
             <h1 className="error__404"> 404 </h1>

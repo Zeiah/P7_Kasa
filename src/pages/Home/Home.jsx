@@ -1,7 +1,12 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Gallery from '../../components/Gallery';
 
 export default function Home() {
+    useEffect(() => {
+        document.title = 'Kasa / Home';
+    }, []);
+
     return (
         <main>
             <section className="home__banner">

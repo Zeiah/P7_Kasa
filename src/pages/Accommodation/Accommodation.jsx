@@ -6,7 +6,7 @@ import Items from '../../components/Items';
 import Rate from '../../components/Rate';
 import Collapse from '../../components/Collapse';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import accommodationsList from '../../logements.json';
 
 export default function Accommodation() {
@@ -15,9 +15,9 @@ export default function Accommodation() {
         (data) => data.id === accommodationId
     );
 
-    /*useEffect(() => {
-        document.title = accommodation.title;
-    }, [accommodation.title]);*/
+    useEffect(() => {
+        document.title = 'Kasa / ' + accommodation.title;
+    }, [accommodation]);
 
     if (accommodation) {
         return (
