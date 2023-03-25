@@ -1,6 +1,12 @@
 import React from 'react';
 import logo from '../assets/logo-footer.png';
 
+/**
+ * Affichage footer
+ *  @param {img} logo - logo footer
+ * @returns html
+ */
+
 export default function Footer() {
     return (
         <footer className="footer">

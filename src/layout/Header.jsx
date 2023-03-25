@@ -2,6 +2,12 @@ import React from 'react';
 import logo from '../assets/logo-header.png';
 import NavBar from '../components/NavBar';
 
+/**
+ * Affichage header
+ * @param {img} logo - logo header
+ * @returns html
+ */
+
 export default function Header() {
     return (
         <header className="header">

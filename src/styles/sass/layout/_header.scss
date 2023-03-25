@@ -55,10 +55,10 @@
 .navBar__link {
     color: $color-primary;
     font-size: 12px;
-    text-decoration: underline;
+    text-decoration: none;
 
     &:focus {
-        text-decoration: none;
+        text-decoration: underline;
     }
 
     @include respond-to(tablet) {

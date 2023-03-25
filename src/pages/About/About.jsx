@@ -3,6 +3,14 @@ import { useEffect } from 'react';
 import Collapse from '../../components/Collapse';
 import banner from '../../assets/banner__about.png';
 
+/**
+ * Affichage de la page About
+ * @param {array} aboutData - tableau des données pour chaque collapse (objet)
+ * @param {string} title - titre du collapse
+ * @param {string} content - contenu du collapse
+ * @returns itération pour chaque collapse avec map()
+ */
+
 export default function About() {
     useEffect(() => {
         document.title = 'Kasa / À propos';

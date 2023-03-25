@@ -2,6 +2,11 @@ import React from 'react';
 import { useEffect } from 'react';
 import Gallery from '../../components/Gallery';
 
+/**
+ * Affichage page d'accueil
+ * @returns html
+ */
+
 export default function Home() {
     useEffect(() => {
         document.title = 'Kasa / Home';

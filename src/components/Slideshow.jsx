@@ -3,6 +3,13 @@ import { useState } from 'react';
 import arrowNext from '../assets/arrow_next_slideshow.png';
 import arrowPrev from '../assets/arrow_prev_slideshow.png';
 
+/**
+ * Méthode d'affichage du carrousel
+ * @param {array} slides -tableau contenant les images disponibles pour chaque logement
+ * @returns logique de défilement des images (previous / next) en fonction du state
+ * @returns logique du compteur
+ */
+
 export default function Slideshow({ slides = [] }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 

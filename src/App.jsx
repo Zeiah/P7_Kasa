@@ -1,11 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import './styles/index.css';
+import './styles/prefixed/index.css';
+import Header from './layout/Header';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Accommodation from './pages/Accommodation/Accommodation';
 import Error from './pages/Error/Error';
-import Header from './layout/Header';
 import Footer from './layout/Footer';
 
 export default function App() {

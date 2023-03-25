@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * Barre de navigation
+ * @returns liens vers page About et page Home avec Link
+ */
+
 export default function NavBar() {
     return (
         <nav className="navBar">

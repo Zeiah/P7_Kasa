@@ -2,6 +2,12 @@ import React from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * Affichage page d'erreur
+ * @return lien vers page d'accueil avec Link
+ * @returns html
+ */
+
 export default function Error() {
     useEffect(() => {
         document.title = 'Kasa / Erreur';

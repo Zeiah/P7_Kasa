@@ -1,10 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import accommodationsList from '../logements.json';
-//import '../styles/index.css';
+
+/**
+ * Méthode d'affichage des logements disponibles
+ * @param {array} accommodationsList - data logements.json
+ * @param {Objet} accommodation - logement
+ * @param {string} accommodation.id- id du logement dans URL
+ * @param {img} accommodation.cover - image de couverture
+ * @param {string} accommodation.title- nom du logement
+ * @returns itération de chaque logements avec map()
+ * @returns lien vers la page Accommodation de chaque logement avec Link
+ */
 
 export default function Gallery() {
-    //affichage
     return (
         <>
             {accommodationsList.map((accommodation) => {

@@ -3,18 +3,17 @@
     flex-direction: column;
     align-items: center;
     color: $color-primary;
-    padding: 170px 0 0 0;
+    margin: 130px 0 0 0;
 
     h1 {
         margin: 0;
         font-weight: 700;
         font-size: 96px;
         line-height: 136.9px;
-        //padding-bottom: 11px;
         @include respond-to(desktop) {
             font-size: 280px;
             line-height: 411px;
-            padding-bottom: 66px;
+            margin-bottom: 66px;
         }
     }
 
@@ -27,6 +26,7 @@
         @include respond-to(desktop) {
             font-size: 36px;
             line-height: 51.34px;
+            padding-bottom: 182px;
         }
     }
 
